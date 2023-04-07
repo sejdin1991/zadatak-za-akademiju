@@ -1,0 +1,41 @@
+/* Tekst linkova koji vode na Google sajtove obojiti u zeleno */
+a[href*="google.com"] {
+    color: green;
+}
+
+/* Tekst linka koji vodi na LINK group web sajt obojiti u crveno */
+a[href*="link-group.eu"] {
+    color: red;
+}
+
+/* Naizmenično bojenje paragrafa unutar second-div elementa */
+/*#second-div>p:nth-of-type(odd) {
+    color: red;
+}
+
+#second-div>p:nth-of-type(even) {
+    color: blue;
+}*/
+
+
+/*ovo gore sam probao da ubacim kao unutar secodn-diva ali nikako nije htjelo da oboji ovako naizmjenicno kako ste napisali)*/
+/* Naizmenično bojenje paragrafa */
+p:nth-of-type(odd) {
+    color: red;
+}
+
+p:nth-of-type(even) {
+    color: blue;
+}
+
+/* Dodavanje teksta "-NEW" žute boje na krajeve paragrafa 2 i 3 */
+#first-div>p:nth-child(2)::after,
+#first-div>p:nth-child(3)::after {
+    content: " -NEW";
+    color: yellow;
+}
+
+/* Prelaskom miša preko paragrafa 10, tekst postaje italic */
+p:nth-last-child(1):hover {
+    font-style: italic;
+}
